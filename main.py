@@ -1,22 +1,25 @@
-from tabula import read_pdf
+from pydoc import Doc
 import PyPDF2
-import docx
-from docx.shared import Pt
+import os
+from PDF_To_Page.Single_Page import Single_Page
+from PDF_To_Pages.Multiple_Pages import Multiple_Pages
 
-pdf_1 = open("Sample.pdf",'rb')
-pdfReader = PyPDF2.PdfFileReader(pdf_1)
+cd = os.chdir('./Documents/Personal/GitHub/PDF_to_Word/PDF_To_Word/')
+print(os.getcwd())
 
-pageObj = []
+pdf_file = open(input("Enter the File Name: "),"rb")
 
-for i in range(0,pdfReader.numPages):
-    pageObj = pdfReader.getPage(i)
-    page_text = pageObj.extractText()
 
-    doc = docx.Document()
-    string = "PDF Page "+str(i+1)
-    doc.add_heading(string, 0)
-    doc.add_paragraph(page_text)
-    doc_name = string+".docx"
-    doc.save(doc_name)
-    
-pdf_1.close()
+pdfReader = PyPDF2.PdfFileReader(pdf_file)
+print("1. PDF to Single Word Doc")
+print("2. PDF to Multiple Word Doc")
+options = int(input("Enter the Choice of yours :  "))
+
+if(options == 1):
+    Single_Page(pdfReader=pdfReader)
+elif(options == 2):
+    Multiple_Pages(pdfReader=pdfReader)
+else:
+    print("You've Entered the Wrong Option!")
+
+pdf_file.close()
