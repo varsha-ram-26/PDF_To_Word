@@ -12,7 +12,7 @@ Step 2: Execute the code
 This code will  create separate word documents for each page in the PDF file
 
 
-# Folder Name: Convert PDF to WoPagerd
+# Folder Name: Convert PDF to Page
 Step 1: Provide the path of the PDF file
 Step 2: Execute the code
 
