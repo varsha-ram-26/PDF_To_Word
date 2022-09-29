@@ -8,6 +8,7 @@ Converts PDF Document (Without Table) to Word
 Step 1: Provide the path of the PDF file
 Step 2: Execute the code
 
+<<<<<<< HEAD
 This code will  create separate word documents for each page in the PDF file
 
 
@@ -19,3 +20,4 @@ This code will convert your pdf to word document
 
 # Main Code
 Converts the PDF according to the options provided.
+
