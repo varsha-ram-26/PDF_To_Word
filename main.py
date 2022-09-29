@@ -7,7 +7,7 @@ from PDF_To_Pages.Multiple_Pages import Multiple_Pages
 cd = os.chdir('./Documents/Personal/GitHub/PDF_to_Word/PDF_To_Word/')
 print(os.getcwd())
 
-pdf_file = open(input("Enter the File Name: "),"rb")
+pdf_file = open(input("Enter the File Name: "),"rb") 
 
 
 pdfReader = PyPDF2.PdfFileReader(pdf_file)
